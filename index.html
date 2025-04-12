@@ -1,0 +1,3551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laguardia Pharmacy - Premium Healthcare Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #0f4c81;
+            --secondary-color: #5b9bd5;
+            --accent-color: #8bc34a;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+            --transition-speed: 0.3s;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+
+
+            --primary: #1e5f74;
+            --primary-light: #3894ad;
+            --secondary: #f6ae2d;
+            --accent: #e64a19;
+            --light: #f5f7fa;
+            --dark: #202a37;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.05);
+            --shadow-stronger: rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --radius: 8px;
+            --radius-lg: 16px;
+            --container-width: 1320px;
+            --header-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-primary);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all var(--transition-speed);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow);
+        }
+
+        /* Header & Navigation */
+        .heading-nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-content1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-content1 img {
+            height: 50px;
+            margin-right: 15px;
+            transition: transform 0.5s ease;
+        }
+
+        .nav-content1:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-content1 h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+
+        .nav-content2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 15px;
+            transition: all var(--transition-speed);
+            color: white;
+        }
+
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .linkedin {
+            background-color: #0077b5;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-content3 {
+            display: flex;
+        }
+
+        .nav-content3 a {
+            margin-left: 25px;
+            font-weight: 600;
+            color: var(--dark-color);
+            position: relative;
+            transition: color var(--transition-speed);
+        }
+
+        .nav-content3 a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width var(--transition-speed);
+        }
+
+        .nav-content3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-content3 a:hover:after {
+            width: 100%;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Mobile sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            right: 0;
+            background-color: var(--primary-color);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding-left: 30px;
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 30px;
+            color: white;
+        }
+
+        /* Modern Hero Section Styles */
+.hero-section {
+  background: linear-gradient(120deg, #f8f9fa 0%, #e9f4ff 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 195, 74, 0.1) 0%, rgba(15, 76, 129, 0.05) 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Content Styles */
+.hero-content {
+  padding-right: 40px;
+}
+
+.hero-tagline {
+  display: inline-block;
+  background-color: rgba(139, 195, 74, 0.15);
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--primary-color);
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 32px;
+  max-width: 90%;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.primary-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(15, 76, 129, 0.2);
+}
+
+.primary-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(15, 76, 129, 0.3);
+}
+
+.secondary-btn {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(15, 76, 129, 0.05);
+  transform: translateY(-3px);
+}
+
+/* Features Section */
+.hero-features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 200px;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(15, 76, 129, 0.1);
+  border-radius: 12px;
+  color: var(--primary-color);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.feature-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: var(--dark-color);
+}
+
+.feature-text p {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Hero Image Styles */
+.hero-image {
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  height: 500px;
+}
+
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(15, 76, 129, 0) 70%, rgba(15, 76, 129, 0.2) 100%);
+  z-index: 1;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hero-image:hover .image-wrapper img {
+  transform: scale(1.05);
+}
+
+.trust-badge {
+  position: absolute;
+  bottom: 30px;
+  left: -30px;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.badge-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #5b9bd5 0%, #0f4c81 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.badge-text span {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--primary-color);
+  display: block;
+  line-height: 1.2;
+}
+
+.badge-text p {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1100px) {
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .image-wrapper {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .hero-description {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .hero-features {
+    justify-content: center;
+  }
+  
+  .feature-card {
+    min-width: 180px;
+  }
+  
+  .image-wrapper {
+    height: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .trust-badge {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-container {
+    padding: 0 30px;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+  }
+  
+  .hero-features {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .feature-card {
+    width: 100%;
+  }
+  
+  .image-wrapper {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+  
+  .hero-container {
+    padding: 0 20px;
+    gap: 30px;
+  }
+  
+  .hero-title {
+    font-size: 30px;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .primary-btn, .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .image-wrapper {
+    height: 300px;
+  }
+  
+  .trust-badge {
+    left: 15px;
+    bottom: 15px;
+    padding: 12px 20px;
+  }
+  
+  .badge-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .badge-text span {
+    font-size: 16px;
+  }
+  
+  .badge-text p {
+    font-size: 12px;
+  }
+}
+
+
+
+        /* Categories Section */
+        .page2 {
+            padding: 80px 0;
+        }
+
+        .page2-up {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        .upper {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .inner {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .inner:hover {
+            transform: translateY(-10px);
+        }
+
+        .inner img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .inner:hover img {
+            transform: scale(1.1);
+        }
+
+        .inner h2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: rgba(15, 76, 129, 0.8);
+            color: white;
+            margin: 0;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .page2-end {
+            max-width: 1400px;
+            margin: 50px auto 0;
+            padding: 0 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .end-div, .end-div1 {
+            display: flex;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .end-div:hover, .end-div1:hover {
+            transform: translateY(-10px);
+        }
+
+        .end-div .inner, .end-div1 .inner {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .end-div .inner:hover, .end-div1 .inner:hover {
+            transform: none;
+        }
+
+        .end-div h3, .end-div1 h3 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .end-div p, .end-div1 p {
+            margin-bottom: 25px;
+            color: var(--dark-color);
+        }
+
+        .end-div a, .end-div1 a {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all var(--transition-speed);
+            align-self: flex-start;
+        }
+
+        .end-div a:hover, .end-div1 a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .inner1 {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .inner1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .end-div:hover .inner1 img, .end-div1:hover .inner1 img {
+            transform: scale(1.05);
+        }
+
+        /* Brands Section */
+        .page3 {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .page3-up {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        .txt-up h1 {
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            position: relative;
+            text-align: center;
+        }
+
+        .txt-up h1:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+
+        .txt-down {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .cont-div {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .cont-div:hover {
+            transform: translateY(-10px);
+        }
+
+        .cont-div img {
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .cont-div:hover img {
+            filter: grayscale(0%);
+        }
+
+        .page3-down {
+            max-width: 1400px;
+            margin: 80px auto 0;
+            padding: 0 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .cont, .cont1, .cont2 {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            background-color: white;
+            padding: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .cont:hover, .cont1:hover, .cont2:hover {
+            transform: translateY(-10px);
+        }
+
+        .cont-txt h1, .cont1 .cont-txt h1, .cont2 .cont-txt h1 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .cont-txt a, .cont1 .cont-txt a, .cont2 .cont-txt a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            transition: all var(--transition-speed);
+        }
+
+        .cont-txt a:hover, .cont1 .cont-txt a:hover, .cont2 .cont-txt a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cont-txt h2, .cont1 .cont-txt h2, .cont2 .cont-txt h2 {
+            font-size: 18px;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .cont-img {
+            margin-top: 20px;
+        }
+
+        .cont-img img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        .cont:hover .cont-img img, .cont1:hover .cont-img img, .cont2:hover .cont-img img {
+            transform: scale(1.05);
+        }
+
+        /* Baby Products Section */
+        .page3-end {
+            max-width: 1400px;
+            margin: 80px auto 0;
+            padding: 0 50px;
+        }
+
+        .page3-end .txt-up {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .page3-end .txt-up h1 {
+            font-size: 36px;
+            text-align: left;
+        }
+
+        .page3-end .txt-up h1:after {
+            left: 0;
+            transform: none;
+        }
+
+        .page3-end .txt-up h2 {
+            font-size: 18px;
+            color: var(--secondary-color);
+        }
+
+        .cont-items {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .cont-items .inner {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cont-up {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .cont-up img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .cont-items .inner:hover .cont-up img {
+            transform: scale(1.1);
+        }
+
+        .cont-down {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cont1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cont1 h2 {
+            font-size: 14px;
+            color: var(--secondary-color);
+            padding: 5px 10px;
+            background-color: rgba(91, 155, 213, 0.1);
+            border-radius: 5px;
+            margin: 0;
+        }
+
+        .cont1 h3 {
+            font-size: 14px;
+            color: #ffa000;
+            margin: 0;
+        }
+
+        .cont2 h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            flex-grow: 1;
+        }
+
+        .cont3 {
+            margin-top: auto;
+        }
+
+        .cont3 button {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+        }
+
+        .cont3 button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cereal Section */
+        .page4 {
+            padding: 80px 0;
+        }
+
+        .page4-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        .cont-up {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .txt-up {
+            flex: 1;
+        }
+
+        .txt-up h1 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .txt-up h2 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .txt-up h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .txt-up a {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all var(--transition-speed);
+        }
+
+        .txt-up a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-up {
+            flex: 1;
+            text-align: center;
+        }
+
+        .img-up img {
+            max-width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .img-up img:hover {
+            transform: scale(1.05);
+        }
+
+        .cont-middle, .cont-down {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .cont-middle:hover, .cont-down:hover {
+            transform: translateY(-10px);
+        }
+
+        .cont-middle h2, .cont-down h2 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* Services Section */
+        .page4-services {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .service-heading h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            position: relative;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .service-heading h1:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+
+        .service-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .inner1, .inner2 {
+            display: flex;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .inner1:hover, .inner2:hover {
+            transform: translateY(-10px);
+        }
+
+        .text {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text h1 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .text h2 {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .text a {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            align-self: flex-start;
+            transition: all var(--transition-speed);
+        }
+
+        .text a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .img {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .inner1:hover .img img, .inner2:hover .img img {
+            transform: scale(1.05);
+        }
+
+        .service-middle {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .serve {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .serve:hover {
+            transform: translateY(-10px);
+        }
+
+        .serve h1 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .serve h2 {
+            font-size: 18px;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .serve h3 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Modern Footer Styles */
+        .modern-footer {
+            background-color: #1f2937;
+            color: #e5e7eb;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .footer-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            padding: 60px 30px;
+        }
+        
+        /* Brand Section */
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .brand-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .brand-container img {
+            height: 50px;
+            width: auto;
+            margin-right: 15px;
+        }
+        
+        .brand-container h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+        }
+        
+        .footer-brand p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #9ca3af;
+            max-width: 300px;
+        }
+        
+        /* Contact Info Section */
+        .footer-contact-info h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-contact-info h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #3b82f6;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+        }
+        
+        .contact-icon {
+            color: #3b82f6;
+            font-size: 18px;
+            min-width: 20px;
+            margin-right: 12px;
+            margin-top: 3px;
+        }
+        
+        .contact-item p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #9ca3af;
+            margin: 0;
+        }
+        
+        .contact-item a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact-item a:hover {
+            color: #3b82f6;
+        }
+        
+        /* Links Section */
+        .footer-links-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .links-column {
+            flex: 1;
+        }
+        
+        .links-column h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .links-column h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #3b82f6;
+        }
+        
+        .links-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .links-column li {
+            margin-bottom: 12px;
+        }
+        
+        .links-column a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        
+        .links-column a:hover {
+            color: #3b82f6;
+            transform: translateX(5px);
+        }
+        
+        /* Footer Bottom */
+        .footer-bottom {
+            background-color: #111827;
+            padding: 20px 30px;
+        }
+        
+        .footer-bottom-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .copyright p {
+            font-size: 14px;
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #374151;
+            border-radius: 50%;
+            color: #9ca3af;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #3b82f6;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Styles */
+        @media screen and (max-width: 992px) {
+            .footer-wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .footer-links-section {
+                grid-column: span 2;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .footer-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links-section {
+                grid-column: span 1;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .social-links {
+                margin-top: 15px;
+            }
+        }
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Animations */
+        .hero1 h1, .txt-up h1 {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hero-inner h2, .txt-up h2 {
+            animation: fadeIn 1s ease-out 0.2s both;
+        }
+
+        .down-div, .serve, .txt-cont {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .btn, .nav-content3 a, .cont-div img, .inner img {
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 1200px) {
+            .upper {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .cont-items {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .service-middle {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .cont-middle {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .nav {
+                padding: 15px 30px;
+            }
+            
+            .nav-content3 {
+                display: none;
+            }
+            
+            .menu-icon {
+                display: block;
+            }
+            
+            .hero2 {
+                flex-direction: column;
+            }
+            
+            .page2-end, .service-inner, .page5-down {
+                grid-template-columns: 1fr;
+            }
+            
+            .page3-down {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .upper {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cont-items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .service-middle {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-down {
+                flex-direction: column;
+            }
+            
+            .page3-down, .cont-items {
+                grid-template-columns: 1fr;
+            }
+            
+            .cont-middle {
+                grid-template-columns: 1fr;
+            }
+            
+            .page6-up {
+                grid-template-columns: 1fr;
+            }
+            
+            .end-div, .end-div1, .inner1, .inner2 {
+                flex-direction: column;
+            }
+            
+            .inner1 .img, .inner2 .img, .end-div .inner1, .end-div1 .inner1 {
+                height: 250px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .nav-content1 h1 {
+                font-size: 20px;
+            }
+            
+            .nav-content1 img {
+                height: 40px;
+            }
+            
+            .nav-content2 {
+                display: none;
+            }
+            
+            .upper {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero1 h1 {
+                font-size: 36px;
+            }
+            
+            .txt-up h1 {
+                font-size: 28px;
+            }
+            
+            .page4-inner .cont-up {
+                flex-direction: column;
+            }
+            
+            .txt-div h1 {
+                font-size: 20px;
+            }
+            
+            .page1-hero, .page2-up, .page2-end, .page3-up, .page3-down, .page3-end, .page4-inner, .service-inner, .service-middle, .page5-up, .cont-middle, .page5-down, .page6-inner {
+                padding: 0 20px;
+            }
+        }
+        .store-hours {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+        }
+        
+        .store-hours-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+        
+        .hours-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hours-heading h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .hours-heading h1::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #8bc34a;
+            border-radius: 2px;
+        }
+        
+        .hours-heading h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: #555;
+        }
+        
+        .hours-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .hours-card {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .day-column, .time-column {
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .day-column {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .day, .time {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+        
+        .day.sunday, .time.sunday {
+            border-bottom: none;
+            font-weight: bold;
+        }
+        
+        .holiday-notice {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+        }
+        
+        .holiday-notice h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .holiday-notice p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .phone-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-link:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .hours-container {
+                flex-direction: column;
+            }
+            
+            .hours-card, .holiday-notice {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* Map */
+        .map {
+            background-color: #f5f7fa;
+            margin-bottom: 100px;
+            margin-top: 100px;
+        }
+
+        .map-container {
+            height: 450px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            gap: 2rem;
+            width: calc(350px * 6);
+            animation: scroll 40s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-350px * 3));
+            }
+        }
+
+
+
+        .baby-care-section {
+      padding: 100px 0;
+      background: linear-gradient(to bottom, #F9FAFC 0%, #F5F7FA 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .baby-care-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background: url('/api/placeholder/800/1200') no-repeat center right;
+      background-size: cover;
+      opacity: 0.04;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 80px;
+    }
+
+    .section-subtitle {
+      display: inline-block;
+      background: rgba(10, 35, 66, 0.08);
+      color: var(--primary);
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 20px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .section-description {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .trusted-by {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 15px;
+    }
+
+    .trusted-label {
+      font-size: 14px;
+      color: #777;
+      margin-right: 5px;
+    }
+
+    .trusted-logos {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .trusted-logo {
+      height: 30px;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    .trusted-logo:hover {
+      opacity: 1;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: var(--primary);
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 30px;
+      z-index: 2;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .product-image {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.1);
+    }
+
+    .product-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(to top, white, transparent);
+    }
+
+    .product-content {
+      padding: 25px;
+    }
+
+    .product-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .product-category {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .product-rating {
+      display: flex;
+      align-items: center;
+      color: var(--secondary);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .product-rating svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+
+    .product-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    
+
+    @media screen and (max-width: 1200px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-title {
+        font-size: 36px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .baby-care-section {
+        padding: 70px 0;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .trusted-logos {
+        gap: 15px;
+      }
+
+      .trusted-logo {
+        height: 25px;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .trusted-by {
+        flex-direction: column;
+      }
+    }
+
+
+
+    .testimonials {
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e2f0fb 100%);
+        }
+
+        
+
+        .container {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .section-subheading {
+            display: inline-block;
+            background-color: rgba(30, 95, 116, 0.1);
+            color: var(--primary);
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #8bc34a;
+            border-radius: 2px;
+        }
+
+        
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+        }
+
+        .testimonial-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s ease;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-card {
+            width: 100%;
+            flex: 0 0 calc(33.333% - 1.5rem);
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px var(--shadow);
+            position: relative;
+            z-index: 3;
+            transition: var(--transition);
+            transform: translateY(0);
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: calc(0.2s * var(--i));
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px var(--shadow-stronger);
+        }
+
+        
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid var(--primary-light);
+            padding: 3px;
+            box-shadow: 0 5px 15px rgba(30, 95, 116, 0.2);
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .testimonial-author h4 {
+            margin-bottom: 0.25rem;
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+
+        .testimonial-position {
+            color: var(--primary-light);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .testimonial-rating {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-text {
+            position: relative;
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 2.5rem;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .slider-dot.active {
+            background-color: var(--primary);
+            width: 30px;
+            border-radius: 10px;
+        }
+
+        .slider-arrows {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 4;
+            padding: 0 20px;
+        }
+
+        .arrow-btn {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--white);
+            border-radius: 50%;
+            box-shadow: 0 5px 15px var(--shadow);
+            color: var(--primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            pointer-events: auto;
+        }
+
+        .arrow-btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(50% - 1rem);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .testimonial-container {
+                padding: 0 30px;
+            }
+            .testimonial-card {
+                flex: 0 0 100%;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .testimonials {
+                padding: 4rem 0;
+            }
+            .testimonial-container {
+                padding: 0 20px;
+            }
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+            .arrow-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+
+
+        /* Payment & Insurance Section */
+        .payment-section {
+            padding: 80px 0;
+            background: linear-gradient(120deg, #f8f9fa 0%, #e9f4ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .payment-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-tagline {
+            display: inline-block;
+            background-color: rgba(139, 195, 74, 0.15);
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .payment-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .payment-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+            transition: transform var(--transition-speed);
+            height: 100%;
+        }
+
+        .payment-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(15, 76, 129, 0.1);
+            border-radius: 50%;
+            margin-bottom: 25px;
+        }
+
+        .card-icon i {
+            font-size: 30px;
+            color: var(--primary-color);
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .payment-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .payment-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .payment-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .emphasized {
+            font-weight: 700;
+        }
+
+        .notification-bar {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 20px rgba(15, 76, 129, 0.2);
+        }
+
+        .notification-content {
+            color: white;
+        }
+
+        .notification-content h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .notification-content p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .notification-button {
+            background-color: white;
+            color: var(--primary-color);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+        }
+
+        .notification-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 992px) {
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+
+            .payment-container {
+                padding: 0 30px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .notification-bar {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .payment-card {
+                padding: 30px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .payment-container {
+                padding: 0 20px;
+            }
+
+            .payment-card {
+                padding: 25px;
+            }
+
+            .card-title {
+                font-size: 20px;
+            }
+
+
+            .section-tagline {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .section-description {
+                font-size: 16px;
+            }
+        }
+        /* Compact Emergency Banner */
+.emergency-banner {
+    background-color: #ffebee;
+    padding: 12px 0;
+    border-bottom: 2px solid #ffcdd2;
+    position: relative;
+}
+
+.emergency-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.emergency-icon {
+    color: #d32f2f;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.emergency-text {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.emergency-text strong {
+    color: #d32f2f;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.emergency-call-btn {
+    background-color: #d32f2f;
+    color: white;
+    font-weight: 600;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.emergency-call-btn:hover {
+    background-color: #b71c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .emergency-container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .emergency-container {
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+    
+    .emergency-text {
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        order: 1;
+    }
+    
+    .emergency-icon {
+        order: 0;
+    }
+    
+    .emergency-call-btn {
+        order: 2;
+        margin-top: 8px;
+    }
+}
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Compact Emergency Call Banner -->
+        <div class="emergency-banner">
+            <div class="emergency-container">
+                <div class="emergency-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <p class="emergency-text">In Case of Emergency: <strong>Call 911</strong></p>
+                <a href="tel:911" class="emergency-call-btn">Call Now</a>
+            </div>
+        </div>
+        <div class="heading-nav">
+            <div class="nav">
+                <div class="nav-content1">
+                    <img src="/api/placeholder/60/60" alt="Laguardia Pharmacy Logo">
+                    <h1>LAGUARDIA</h1>
+                </div>
+                <div class="nav-content2">
+                    <a href="https://facebook.com" class="icon facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" class="icon linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" class="icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <div class="menu-icon" onclick="openNav()">&#9776;</div> 
+
+                <div class="nav-content3">
+                    <a href="#">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#products">Products</a>
+                    <a href="#features">Features</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <!-- Sidebar Navigation -->
+                <div id="sidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+                    <a href="#">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#products">Products</a>
+                    <a href="#features">Features</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modern Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-tagline">Your Trusted Healthcare Partner</span>
+                    <h1 class="hero-title">Premium Pharmacy Care For Your Wellbeing</h1>
+                    <p class="hero-description">
+                    At Laguardia, we're dedicated to making healthcare accessible through quality medicines, personalized service, and expert guidance. Your health journey is our priority.
+                    </p>
+                    <div class="hero-cta">
+                    <a href="#services" class="primary-btn">Our Services</a>
+                    <a href="#contact" class="secondary-btn">Contact Us</a>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Genuine Products</h3>
+                                <p>All medicines and products verified</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Fast Delivery</h3>
+                                <p>Same-day local delivery available</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>24/7 Support</h3>
+                                <p>Professional pharmacists on call</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                    <img src="https://plus.unsplash.com/premium_photo-1661776255948-7a76baa9d7b9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHBoYXJtYWN5fGVufDB8fDB8fHww" alt="Pharmacy Professional">
+                    </div>
+                    <div class="trust-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="badge-text">
+                        <span>15+ Years</span>
+                        <p>Trusted Service</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="page2" id="products">
+            <div class="page2-up">
+                <div class="upper">
+                    <div class="inner">
+                        <img src="https://media.istockphoto.com/id/490876094/photo/highlighted-ankle-of-woman-on-treadmill.webp?a=1&b=1&s=612x612&w=0&k=20&c=IVza-MNKFTi4iUxctOlVGcXhbduGcqL2VOsgJYPiqdo=" alt="Bone & Joint care">
+                        <h2>Bone & Joint Care</h2>
+                    </div>
+                    <div class="inner">
+                        <img src="https://media.istockphoto.com/id/1506823544/photo/kidney-problems.webp?a=1&b=1&s=612x612&w=0&k=20&c=lT_7g0BNbOxsHFjDAyOwTgMen8IZwWuSiN5cXtar9rk=" alt="Kidney & Stomach care">
+                        <h2>Kidney & Stomach Care</h2>
+                    </div>
+                    <div class="inner">
+                        <img src="https://media.istockphoto.com/id/1796947698/photo/doctor-connecting-continuous-glucose-monitor-with-smartphone-to-check-blood-sugar-level-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=3QTtX2TRPUPkPMhppNaTTdSR-fAn7n46ib20tPfLdEk=" alt="Diabetes care">
+                        <h2>Diabetes Care</h2>
+                    </div>
+                    <div class="inner">
+                        <img src="https://media.istockphoto.com/id/1627701437/photo/optometry-smile-and-woman-with-prescription-glasses-optician-and-helping-client-with-product.webp?a=1&b=1&s=612x612&w=0&k=20&c=3ZgJkpl-6kbvJPBHtZ39gatst-OMzhx2pPplxefjUWo=" alt="Eye care">
+                        <h2>Eye Care</h2>
+                    </div>
+                    <div class="inner">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2VsbG5lc3N8ZW58MHx8MHx8fDA%3D" alt="Meditation Exercises">
+                        <h2>Wellness & Meditation</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="page2-end">
+                <div class="end-div">
+                    <div class="inner">
+                        <h3>🩺 Expert Medical Consultation</h3>
+                        <p>Good health starts with informed decisions. Our pharmacists provide professional guidance on medications and health concerns to support your wellness journey.</p>
+                        <a href="#">Schedule Consultation</a>
+                    </div>
+                    <div class="inner1">
+                        <img src="consultation.jpg" alt="Medical Consultation">
+                    </div>
+                </div>
+                <div class="end-div1">
+                    <div class="inner">
+                        <h3>📋 Prescription Management</h3>
+                        <p>Need a refill or consultation? Our streamlined process makes managing your prescriptions effortless.</p>
+                        <a href="#">Manage Prescriptions</a>
+                    </div>
+                    <div class="inner1">
+                        <img src="https://images.unsplash.com/photo-1626351543430-23d7f5609535?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFByZXNjcmlwdGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Prescription Management">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page3" id="features">
+            <div class="page3-up">
+                <div class="txt-up">
+                    <h1>Trusted Pharmaceutical Brands</h1>
+                </div>
+                <div class="txt-down">
+                    <div class="cont-div">
+                        <img src="/api/placeholder/150/80" alt="GSK">
+                    </div>
+                    <div class="cont-div">
+                        <img src="/api/placeholder/150/80" alt="AstraZeneca">
+                    </div>
+                    <div class="cont-div">
+                        <img src="/api/placeholder/150/80" alt="Novartis">
+                    </div>
+                    <div class="cont-div">
+                        <img src="/api/placeholder/150/80" alt="Johnson & Johnson">
+                    </div>
+                    <div class="cont-div">
+                        <img src="/api/placeholder/150/80" alt="Merck">
+                    </div>
+                    <div class="cont-div">
+                        <img src="/api/placeholder/150/80" alt="Pfizer">
+                    </div>
+                    <div class="cont-div">
+                        <img src="/api/placeholder/150/80" alt="Sanofi">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page3-down">
+                <div class="cont">
+                    <div class="cont-txt">
+                        <h1>Maternal Health & Comfort</h1>
+                        <a href="">Shop Now</a>
+                        <h2>5% Cashback</h2>
+                    </div>
+                    <div class="cont-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1709077628198-72426361feec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TWF0ZXJuYWwlMjBIZWFsdGglMjAlMjYlMjBDb21mb3J0fGVufDB8fDB8fHww" alt="Maternal Health">
+                    </div>
+                </div>
+                <div class="cont2">
+                    <div class="cont-txt">
+                        <h1>Headache & Migraine Solutions</h1>
+                        <a href="">Shop Now</a>
+                        <h2>10% OFF</h2>
+                    </div>
+                    <div class="cont-img">
+                        <img src="https://media.istockphoto.com/id/1299357739/photo/middle-aged-blonde-woman-sits-on-couch-at-living-room-holding-her-head-with-her-hands-feels.webp?a=1&b=1&s=612x612&w=0&k=20&c=pyhFyyH07CgGDClwSXLnMBs0e8qip-RdJ_qDwQ8mP3o=" alt="Headache & Migraine">
+                    </div>
+                </div>
+                <div class="cont2">
+                    <div class="cont-txt">
+                        <h1>Cold & Flu Relief</h1>
+                        <a href="">Shop Now</a>
+                        <h2>10% OFF</h2>
+                    </div>
+                    <div class="cont-img">
+                        <img src="https://media.istockphoto.com/id/1857108667/photo/cold-and-flu-symptoms-sick-indian-woman-covered-in-blanket-blowing-nose.webp?a=1&b=1&s=612x612&w=0&k=20&c=qJbPnc2Kj5j3dZMzvATh-1CF-lC-_GEUIHmU_jEK-4s=" alt="Cold & Flu">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="baby-care-section">
+            <div class="container">
+              <div class="section-header">
+                <h2 class="section-title">Premium Baby Care Collection</h2>
+                <p class="section-description">Discover our specially curated range of premium baby care products, made with the finest ingredients and formulated by pharmaceutical experts to ensure your baby's health and comfort.</p>
+                <div class="trusted-by">
+                  <span class="trusted-label">Trusted by</span>
+                  <div class="trusted-logos">
+                    <img src="/api/placeholder/100/30" alt="Trusted Logo 1" class="trusted-logo">
+                    <img src="/api/placeholder/100/30" alt="Trusted Logo 2" class="trusted-logo">
+                    <img src="/api/placeholder/100/30" alt="Trusted Logo 3" class="trusted-logo">
+                  </div>
+                </div>
+              </div>
+        
+              <div class="products-grid">
+                <!-- First Product -->
+                <div class="product-card">
+                  <span class="product-badge">Best Seller</span>
+                  <div class="product-image">
+                    <img src="/api/placeholder/350/350" alt="Premium Baby Diapers">
+                  </div>
+                  <div class="product-content">
+                    <div class="product-meta">
+                      <span class="product-category">Nutrition</span>
+                      <div class="product-rating">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        4.8
+                      </div>
+                    </div>
+                    <h3 class="product-title">Advanced-Protection Premium Baby Diapers</h3>
+                    
+                  </div>
+                </div>
+        
+                <!-- Second Product -->
+                <div class="product-card">
+                  <span class="product-badge">Organic</span>
+                  <div class="product-image">
+                    <img src="/api/placeholder/350/350" alt="Organic Baby Food">
+                  </div>
+                  <div class="product-content">
+                    <div class="product-meta">
+                      <span class="product-category">Wellness</span>
+                      <div class="product-rating">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        4.9
+                      </div>
+                    </div>
+                    <h3 class="product-title">Certified Organic Baby Food Collection</h3>
+                    
+                  </div>
+                </div>
+        
+                <!-- Third Product -->
+                <div class="product-card">
+                  <span class="product-badge">Premium</span>
+                  <div class="product-image">
+                    <img src="/api/placeholder/350/350" alt="Premium Infant Formula">
+                  </div>
+                  <div class="product-content">
+                    <div class="product-meta">
+                      <span class="product-category">Nutrition</span>
+                      <div class="product-rating">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        4.7
+                      </div>
+                    </div>
+                    <h3 class="product-title">Advanced Nutrition Infant Formula</h3>
+                    
+                  </div>
+                </div>
+        
+                <!-- Fourth Product -->
+                <div class="product-card">
+                  <span class="product-badge">Specialty</span>
+                  <div class="product-image">
+                    <img src="/api/placeholder/350/350" alt="Specialty Formula">
+                  </div>
+                  <div class="product-content">
+                    <div class="product-meta">
+                      <span class="product-category">Healthcare</span>
+                      <div class="product-rating">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        4.9
+                      </div>
+                    </div>
+                    <h3 class="product-title">Hypoallergenic Specialty Baby Formula</h3>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        
+
+        <div class="page4-services" id="services">
+            <div class="service-heading">
+                <h1>Our Premium Services</h1>
+            </div>
+            <div class="service-inner">
+                <div class="inner1">
+                    <div class="text">
+                        <h1>🏥 Comprehensive Healthcare Solutions</h1>
+                        <h2>At Laguardia, we're committed to your well-being with reliable, affordable, and convenient healthcare services backed by professional expertise.</h2>
+                        <a href="">Learn More</a>
+                    </div>
+                    <div class="img">
+                        <img src="/api/placeholder/500/300" alt="Healthcare Solutions">
+                    </div>
+                </div>
+                <div class="inner2">
+                    <div class="text">
+                        <h1>🩺 Expert Care & Professional Guidance</h1>
+                        <h2>Our team of licensed pharmacists provides personalized consultation to ensure you receive the right medications and healthcare advice.</h2>
+                        <a href="">Learn More</a>
+                    </div>
+                    <div class="img">
+                        <img src="/api/placeholder/500/300" alt="Expert Care">
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-middle">
+                <div class="serve">
+                    <h1>🚚</h1>
+                    <h2>Free Prescription Delivery</h2>
+                    <h3>Enjoy the convenience of getting your medications delivered straight to your doorstep at no extra cost. Fast, free, and hassle-free service.</h3>
+                </div>
+                <div class="serve">
+                    <h1>👁️</h1>
+                    <h2>DMV Eye Test</h2>
+                    <h3>Get your DMV eye test done quickly and easily with our certified professionals for accurate vision screening for driver's license renewal.</h3>
+                </div>
+                <div class="serve">
+                    <h1>📦</h1> 
+                    <h2>UPS Access Point</h2>
+                    <h3>Pick up or drop off your packages with ease at our convenient UPS Access Point. No more missed deliveries—secure and flexible.</h3>
+                </div>
+                <div class="serve">
+                    <h1>💸</h1>
+                    <h2>Ria Bill Payment</h2>
+                    <h3>Pay your bills quickly and securely with Ria Bill Payment services for utilities, phone, and other essential services.</h3>
+                </div>
+
+                <div class="serve">
+                    <h1>📷</h1>
+                    <h2>Passport Photos</h2>
+                    <h3>Get professional passport photos taken in minutes with free passport application service when you get your photos with us.</h3>
+                </div>
+                <div class="serve">
+                    <h1>🖋️</h1>
+                    <h2>Notary Public</h2>
+                    <h3>Our certified Notary Public services are fast, reliable, and available when you need important documents notarized.</h3>
+                </div>
+                <div class="serve">
+                    <h1>🎁</h1> 
+                    <h2>Premium Gift Cards</h2>
+                    <h3>Choose from a wide selection of gift cards from popular retailers including Amazon, Walmart, Steam, and many more.</h3>
+                </div>
+                <div class="serve">
+                    <h1>🖨️</h1>
+                    <h2>Copy, Print, Scan, Fax</h2>
+                    <h3>Complete business center services including high-quality photocopying, printing, faxing, and document scanning.</h3>
+                </div>
+
+                <div class="serve">
+                    <h1>🏧</h1>
+                    <h2>ATM Service</h2>
+                    <h3>Access cash easily with our on-site ATM service with minimal transaction fees of only 99 cents per withdrawal.</h3>
+                </div>
+                <div class="serve">
+                    <h1>🔑</h1>
+                    <h2>Precision Key Duplication</h2>
+                    <h3>We create precise copies of your keys with a full money-back guarantee if you're not completely satisfied with our service.</h3>
+                </div>
+                <div class="serve">
+                    <h1>🎈</h1> 
+                    <h2>Helium Balloon Service</h2>
+                    <h3>Enhance your celebrations with our premium helium gas service for balloons, perfect for parties and special occasions.</h3>
+                </div>
+                <div class="serve">
+                    <h1>🎰</h1>
+                    <h2>New York Lottery</h2>
+                    <h3>Convenient access to New York Lottery games including scratch-offs and daily draws—try your luck today!</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page4-services" id="services">
+            <div class="service-heading">
+                <h1>Our Premium Services</h1>
+            </div>
+            <div class="service-inner">
+                <div class="inner1">
+                    <div class="text">
+                        <h1>🏥 Comprehensive Healthcare Solutions</h1>
+                        <h2>At Laguardia, we're committed to your well-being with reliable, affordable, and convenient healthcare services backed by professional expertise.</h2>
+                        <a href="">Learn More</a>
+                    </div>
+                    <div class="img">
+                        <img src="/api/placeholder/500/300" alt="Healthcare Solutions">
+                    </div>
+                </div>
+                <div class="inner2">
+                    <div class="text">
+                        <h1>🩺 Expert Care & Professional Guidance</h1>
+                        <h2>Our team of licensed pharmacists provides personalized consultation to ensure you receive the right medications and healthcare advice.</h2>
+                        <a href="">Learn More</a>
+                    </div>
+                    <div class="img">
+                        <img src="/api/placeholder/500/300" alt="Expert Care">
+                    </div>
+                </div>
+                <div class="inner1">
+                    <div class="text">
+                        <h1>🏥 Comprehensive Healthcare Solutions</h1>
+                        <h2>At Laguardia, we're committed to your well-being with reliable, affordable, and convenient healthcare services backed by professional expertise.</h2>
+                        <a href="">Learn More</a>
+                    </div>
+                    <div class="img">
+                        <img src="/api/placeholder/500/300" alt="Healthcare Solutions">
+                    </div>
+                </div>
+                <div class="inner2">
+                    <div class="text">
+                        <h1>🩺 Expert Care & Professional Guidance</h1>
+                        <h2>Our team of licensed pharmacists provides personalized consultation to ensure you receive the right medications and healthcare advice.</h2>
+                        <a href="">Learn More</a>
+                    </div>
+                    <div class="img">
+                        <img src="/api/placeholder/500/300" alt="Expert Care">
+                    </div>
+                </div>
+                <div class="inner1">
+                    <div class="text">
+                        <h1>🏥 Comprehensive Healthcare Solutions</h1>
+                        <h2>At Laguardia, we're committed to your well-being with reliable, affordable, and convenient healthcare services backed by professional expertise.</h2>
+                        <a href="">Learn More</a>
+                    </div>
+                    <div class="img">
+                        <img src="/api/placeholder/500/300" alt="Healthcare Solutions">
+                    </div>
+                </div>
+                <div class="inner2">
+                    <div class="text">
+                        <h1>🩺 Expert Care & Professional Guidance</h1>
+                        <h2>Our team of licensed pharmacists provides personalized consultation to ensure you receive the right medications and healthcare advice.</h2>
+                        <a href="">Learn More</a>
+                    </div>
+                    <div class="img">
+                        <img src="/api/placeholder/500/300" alt="Expert Care">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="payment-section">
+            <div class="payment-container">
+                <div class="section-header">
+                    <h2 class="section-title">Insurance & Payment Options</h2>
+                    <p class="section-description">At our pharmacy, we strive to make healthcare accessible to everyone. We accept a wide range of insurance plans and payment methods to ensure you receive the care you need without hassle.</p>
+                </div>
+    
+                <div class="payment-options">
+                    <div class="payment-card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="card-title">Accepted Insurance Plans</h3>
+                        <ul class="payment-list">
+                            <li><span class="emphasized">Medicare</span> &nbsp;- Parts A, B, C & D</li>
+                            <li><span class="emphasized">Medicaid</span> &nbsp;- All state plans accepted</li>
+                            <li><span class="emphasized">CVS Caremark</span> &nbsp;- All plans accepted</li>
+                            <li><span class="emphasized">Blue Cross Blue Shield</span></li>
+                            <li><span class="emphasized">United Healthcare</span></li>
+                            <li><span class="emphasized">Aetna</span></li>
+                            <li><span class="emphasized">Cigna</span></li>
+                            <li><span class="emphasized">Humana</span></li>
+                            <li><span class="emphasized">WIC</span> &nbsp;checks accepted</li>
+                            <li><span class="emphasized">OTC card</span> &nbsp;for eligible items</li>
+                            <li><span class="emphasized">Benefit card</span> &nbsp;eligible purchases</li>
+                        </ul>
+                    </div>
+    
+                    <div class="payment-card">
+                        <div class="card-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3 class="card-title">Payment Methods</h3>
+                        <ul class="payment-list">
+                            <li><span class="emphasized">Cash</span> &nbsp;payments accepted</li>
+                            <li><span class="emphasized">Credit Cards</span> &nbsp;- Visa, MasterCard, American Express, Discover</li>
+                            <li><span class="emphasized">Debit Cards</span> &nbsp;- All major cards accepted</li>
+                            <li><span class="emphasized">Mobile Payments</span> &nbsp;- Apple Pay, Google Pay, Samsung Pay</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials -->
+        <section class="testimonials section" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>What Our Customers Say</h2>
+                    <p>Discover why our customers trust us for their healthcare needs.</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/60/60" alt="Customer Avatar">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Sarah Johnson</h4>
+                            <span class="testimonial-position">Local Resident</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">The staff at LaGuardia Pharmacy are incredibly knowledgeable and always take the time to explain my medications. Their delivery service has been a lifesaver!</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/60/60" alt="Customer Avatar">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Michael Rodriguez</h4>
+                            <span class="testimonial-position">Regular Customer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">I've been coming to LaGuardia Pharmacy for years because of their exceptional service and the quality of their products. The consultation service is truly valuable.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/60/60" alt="Customer Avatar">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Emily Chang</h4>
+                            <span class="testimonial-position">New Customer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">After moving to the area, finding LaGuardia Pharmacy was a blessing. Their staff is friendly, and they go above and beyond to ensure I get the right medications.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/60/60" alt="Customer Avatar">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>David Wilson</h4>
+                            <span class="testimonial-position">Senior Customer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">The medication management service has made a huge difference in my life. The pharmacists are patient and take the time to answer all my questions.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/60/60" alt="Customer Avatar">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Jennifer Adams</h4>
+                            <span class="testimonial-position">Mother of Two</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">The children's health section is wonderful, and the staff always helps me find the right products for my kids. Their advice has been invaluable!</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/60/60" alt="Customer Avatar">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Robert Thompson</h4>
+                            <span class="testimonial-position">Healthcare Worker</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">As a healthcare professional myself, I appreciate the attention to detail and professionalism at LaGuardia Pharmacy. They're truly committed to excellence.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Store Hours Section (Add this before the page6 div/footer) -->
+        <div class="store-hours" id="hours">
+            <div class="store-hours-inner">
+                <div class="hours-heading">
+                    <h1>Store Hours</h1>
+                    <h2>Visit us at your convenience</h2>
+                </div>
+                <div class="hours-container">
+                    <div class="hours-card">
+                        <div class="day-column">
+                            <div class="day">Monday</div>
+                            <div class="day">Tuesday</div>
+                            <div class="day">Wednesday</div>
+                            <div class="day">Thursday</div>
+                            <div class="day">Friday</div>
+                            <div class="day">Saturday</div>
+                            <div class="day sunday">Sunday</div>
+                        </div>
+                        <div class="time-column">
+                            <div class="time">9:00 AM - 7:00 PM</div>
+                            <div class="time">9:00 AM - 7:00 PM</div>
+                            <div class="time">9:00 AM - 7:00 PM</div>
+                            <div class="time">9:00 AM - 7:00 PM</div>
+                            <div class="time">9:00 AM - 7:00 PM</div>
+                            <div class="time">10:00 AM - 6:00 PM</div>
+                            <div class="time sunday">Closed</div>
+                        </div>
+                    </div>
+                    <div class="holiday-notice">
+                        <h3>Holiday Hours</h3>
+                        <p>Hours may vary on holidays. Please call ahead to confirm.</p>
+                        <a href="tel:+13476490996" class="phone-link">
+                            <i class="fa-solid fa-phone"></i> (347) 649-0996
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Map Section -->
+        <section class="map section-sm">
+            <div class="container">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0239559776114!2d-73.87011832352842!3d40.761497834583174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25f94e5090219%3A0x71af9b53f0e41172!2sLaguardia%20Pharmacy!5e0!3m2!1sen!2sus!4v1688759432387!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        
+
+        
+
+        <!-- Modern Minimal Footer (Replace the existing footer/page6 div) -->
+        <footer class="modern-footer" id="contact">
+            <!-- Footer Main Content -->
+            <div class="footer-wrapper">
+                <!-- Logo & Brief About -->
+                <div class="footer-brand">
+                    <div class="brand-container">
+                        <img src="/api/placeholder/80/80" alt="Laguardia Pharmacy Logo">
+                        <h2>LAGUARDIA</h2>
+                    </div>
+                    <p>Your trusted neighborhood pharmacy since 1998. Quality healthcare products and personalized service.</p>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-contact-info">
+                    <h3>Contact</h3>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <p>101-22 Astoria Boulevard<br>East Elmhurst, NY 11369</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
+                            <p><a href="tel:+13476490996">(347) 649-0996</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            <p><a href="mailto:contact@laguardiapharmacy.com">contact@laguardiapharmacy.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-clock"></i></span>
+                            <p>Mon-Fri: 9am-7pm<br>Sat: 10am-6pm, Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <div class="links-column">
+                        <h3>Main Menu</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#hours">Store Hours</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-column">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="#services">Prescription Delivery</a></li>
+                            <li><a href="#services">DMV Eye Test</a></li>
+                            <li><a href="#services">Notary Public</a></li>
+                            <li><a href="#services">UPS Access Point</a></li>
+                            <li><a href="#services">NY Lottery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-wrapper">
+                    <div class="copyright">
+                        <p>&copy; <span id="year"></span> Laguardia Pharmacy. All Rights Reserved</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <script>
+        // Navigation sidebar functions
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+
+        // Smooth scroll for navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.nav-content3 a, #sidebar a');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    if (href.startsWith('#') && href !== '#') {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            const offsetTop = targetElement.offsetTop;
+                            window.scrollTo({
+                                top: offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Close the sidebar on mobile if it's open
+                            closeNav();
+                        }
+                    }
+                });
+            });
+        });
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.inner, .down-div, .serve, .txt-cont, .cont, .cont1, .cont2, .end-div, .end-div1');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial state
+            const elements = document.querySelectorAll('.inner, .down-div, .serve, .txt-cont, .cont, .cont1, .cont2, .end-div, .end-div1');
+            elements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // Trigger on page load
+            animateOnScroll();
+            
+            // Trigger on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+        
+        // Current year for copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.querySelector('.page6-end h2');
+            if (yearElement) {
+                const currentYear = new Date().getFullYear();
+                yearElement.innerHTML = `&copy; ${currentYear} Laguardia Pharmacy. All Rights Reserved.`;
+            }
+        });
+        
+        // Image lazy loading
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            
+            const lazyLoadImage = function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                        }
+                        observer.unobserve(img);
+                    }
+                });
+            };
+            
+            const imageObserver = new IntersectionObserver(lazyLoadImage, {
+                rootMargin: '50px 0px',
+                threshold: 0.1
+            });
+            
+            images.forEach(image => {
+                if (image.src) {
+                    image.dataset.src = image.src;
+                    image.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
+                    imageObserver.observe(image);
+                }
+            });
+        });
+        
+        // Service hover effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const services = document.querySelectorAll('.serve');
+            
+            services.forEach(service => {
+                service.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                service.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+
+        // Testimonial Slider Pause on Hover
+        const testimonialSlider = document.querySelector('.testimonial-slider');
+        
+        if (testimonialSlider) {
+            testimonialSlider.addEventListener('mouseenter', () => {
+                testimonialSlider.style.animationPlayState = 'paused';
+            });
+            
+            testimonialSlider.addEventListener('mouseleave', () => {
+                testimonialSlider.style.animationPlayState = 'running';
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
