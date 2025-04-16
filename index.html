@@ -1177,237 +1177,332 @@
         }
 
 
-        /* Modern Footer Styles */
-        .modern-footer {
-            background-color: #1f2937;
-            color: #e5e7eb;
-            padding: 0;
-            font-family: Arial, sans-serif;
+        /* Premium Footer Styles for Pharmacy Business */
+        .premium-footer {
+            background-color: #f8f9fa;
+            color: #202a37;
+            font-family: var(--font-primary);
+            position: relative;
         }
-        
-        .footer-wrapper {
+
+        /* Main Footer Section */
+        .premium-footer .container {
+            width: 100%;
             max-width: 1400px;
             margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .footer-main {
+            padding: 80px 0 60px;
+            background: linear-gradient(to right, #f8f9fa, #e9f4ff);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 40px;
-            padding: 60px 30px;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
         }
-        
-        /* Brand Section */
-        .footer-brand {
-            display: flex;
-            flex-direction: column;
+
+        /* Brand Column */
+        .brand-column {
+            padding-right: 20px;
         }
-        
-        .brand-container {
+
+        .footer-logo {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
-        
-        .brand-container img {
-            height: 50px;
-            width: auto;
+
+        .footer-logo img {
+            height: 60px;
             margin-right: 15px;
+            transition: transform 0.3s ease;
         }
-        
-        .brand-container h2 {
+
+        .footer-logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .footer-logo h2 {
+            color: var(--primary-color);
             font-size: 24px;
             font-weight: 700;
-            color: #fff;
+            letter-spacing: 1px;
             margin: 0;
         }
-        
-        .footer-brand p {
+
+        .footer-tagline {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .footer-description {
             font-size: 15px;
             line-height: 1.6;
-            color: #9ca3af;
-            max-width: 300px;
+            color: #555;
+            margin-bottom: 25px;
         }
-        
-        /* Contact Info Section */
-        .footer-contact-info h3 {
-            font-size: 18px;
-            font-weight: 600;
-            color: #fff;
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-social a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--primary-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(15, 76, 129, 0.2);
+        }
+
+        /* Links Columns */
+        .footer-column h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            font-weight: 700;
             margin-bottom: 25px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
-        
-        .footer-contact-info h3:after {
+
+        .footer-column h3::after {
             content: '';
             position: absolute;
-            left: 0;
             bottom: 0;
-            width: 40px;
-            height: 2px;
-            background-color: #3b82f6;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        .contact-item {
-            display: flex;
-        }
-        
-        .contact-icon {
-            color: #3b82f6;
-            font-size: 18px;
-            min-width: 20px;
-            margin-right: 12px;
-            margin-top: 3px;
-        }
-        
-        .contact-item p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #9ca3af;
-            margin: 0;
-        }
-        
-        .contact-item a {
-            color: #9ca3af;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        
-        .contact-item a:hover {
-            color: #3b82f6;
-        }
-        
-        /* Links Section */
-        .footer-links-section {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .links-column {
-            flex: 1;
-        }
-        
-        .links-column h3 {
-            font-size: 18px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .links-column h3:after {
-            content: '';
-            position: absolute;
             left: 0;
-            bottom: 0;
             width: 40px;
-            height: 2px;
-            background-color: #3b82f6;
+            height: 3px;
+            background-color: var(--accent-color);
         }
-        
-        .links-column ul {
+
+        .footer-links {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
-        .links-column li {
+
+        .footer-links li {
             margin-bottom: 12px;
         }
-        
-        .links-column a {
-            color: #9ca3af;
+
+        .footer-links a {
+            color: #404a57;
             text-decoration: none;
-            font-size: 14px;
-            transition: all 0.2s;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 0;
             display: inline-block;
         }
-        
-        .links-column a:hover {
-            color: #3b82f6;
-            transform: translateX(5px);
+
+        .footer-links a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: all 0.3s ease;
+            opacity: 0;
         }
-        
-        /* Footer Bottom */
-        .footer-bottom {
-            background-color: #111827;
-            padding: 20px 30px;
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 15px;
         }
-        
-        .footer-bottom-wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+        .footer-links a:hover::before {
+            width: 10px;
+            opacity: 1;
         }
-        
-        .copyright p {
-            font-size: 14px;
-            color: #6b7280;
+
+        /* Contact Column */
+        .contact-info {
+            list-style: none;
+            padding: 0;
             margin: 0;
         }
-        
-        .social-links {
+
+        .contact-info li {
             display: flex;
-            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
         }
-        
-        .social-links a {
+
+        .contact-icon {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 36px;
-            height: 36px;
-            background-color: #374151;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(15, 76, 129, 0.08);
             border-radius: 50%;
-            color: #9ca3af;
+            margin-right: 15px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .contact-text {
             font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .contact-text span,
+        .contact-text a {
+            display: block;
+            color: #404a57;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-text a:hover {
+            color: var(--primary-color);
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 5px 15px;
+            align-items: center;
+        }
+
+
+        /* Bottom Footer */
+        .footer-bottom {
+            background-color: #1f2937;
+            padding: 25px 0;
+            color: #9ca3af;
+        }
+
+        .footer-bottom-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright p,
+        .developer-credit p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .developer-link {
+            color: var(--accent-color);
+            font-weight: 600;
+            text-decoration: none;
+            position: relative;
             transition: all 0.3s ease;
         }
-        
-        .social-links a:hover {
-            background-color: #3b82f6;
-            color: #fff;
-            transform: translateY(-3px);
+
+        .developer-link:hover {
+            color: white;
         }
-        
+
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-legal a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-legal a:hover {
+            color: white;
+        }
+
         /* Responsive Styles */
-        @media screen and (max-width: 992px) {
-            .footer-wrapper {
+        @media screen and (max-width: 1200px) {
+            .footer-grid {
                 grid-template-columns: 1fr 1fr;
+                gap: 40px 60px;
             }
             
-            .footer-links-section {
-                grid-column: span 2;
-            }
         }
-        
+
         @media screen and (max-width: 768px) {
-            .footer-wrapper {
-                grid-template-columns: 1fr;
+            .footer-main {
+                padding: 60px 0 40px;
             }
             
-            .footer-links-section {
-                grid-column: span 1;
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
             
-            .contact-grid {
-                grid-template-columns: 1fr;
+            .newsletter-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .newsletter-form {
+                width: 100%;
+                max-width: none;
             }
             
             .footer-bottom-wrapper {
                 flex-direction: column;
+                align-items: center;
+                text-align: center;
                 gap: 15px;
             }
             
-            .social-links {
-                margin-top: 15px;
+            .footer-legal {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .footer-main{
+                padding: 40px 0;
+            }
+            
+            .premium-footer .container {
+                padding: 0 20px;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                height: auto;
+                gap: 15px;
+            }
+            
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+                height: 50px;
             }
         }
         /* Animation Keyframes */
@@ -2829,24 +2924,12 @@
                 margin-top: 8px;
             }
         }
-/* Contact Section Styles */
-.contact-section {
+        /* Contact Section Styles */
+        .contact-section {
             padding: 100px 0;
             background: linear-gradient(to right, #f8f9fa 50%, #e9f4ff 100%);
             position: relative;
             overflow: hidden;
-        }
-
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            right: -50px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(139, 195, 74, 0.1) 0%, rgba(15, 76, 129, 0.05) 70%);
-            border-radius: 50%;
-            z-index: 1;
         }
 
         .contact-header {
@@ -3116,6 +3199,219 @@
                 padding: 0 20px;
             }
         }
+
+        .popup-main-content {
+            margin-top: 30px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: var(--box-shadow);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* Overlay for popup */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .popup-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 30px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .popup-header h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform var(--transition-speed);
+        }
+
+        .close-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .popup-content {
+            padding: 30px;
+        }
+
+        .policy-section {
+            margin-bottom: 30px;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .policy-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: var(--dark-color);
+        }
+
+        .policy-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .policy-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .popup-contact-info {
+            background-color: var(--light-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .popup-contact-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-method i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 18px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .popup-footer {
+            background-color: var(--light-color);
+            padding: 20px 30px;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .popup-footer p {
+            color: var(--dark-color);
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all var(--transition-speed);
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow);
+        }
+
+        @media screen and (max-width: 768px) {
+            .popup-container {
+                width: 95%;
+                max-height: 80vh;
+            }
+
+            .popup-header h2 {
+                font-size: 20px;
+            }
+
+            .popup-content {
+                padding: 20px;
+            }
+
+            .policy-section h3 {
+                font-size: 18px;
+            }
+
+            .policy-section p {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .popup-header {
+                padding: 15px 20px;
+            }
+
+            .popup-content {
+                padding: 15px;
+            }
+
+            .popup-footer {
+                padding: 15px 20px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
         
     </style>
 </head>
@@ -3134,7 +3430,7 @@
         <div class="heading-nav">
             <div class="nav">
                 <div class="nav-content1">
-                    <img src="/img/logo.png" alt="Laguardia Pharmacy Logo">
+                    <img src="/img/logo1.png" alt="Laguardia Pharmacy Logo">
                 </div>
 
                 <div class="menu-icon" onclick="openNav()">&#9776;</div> 
@@ -3186,7 +3482,7 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="badge-text">
-                        <span>15+ Years</span>
+                        <span>Years of</span>
                         <p>Trusted Service</p>
                     </div>
                     </div>
@@ -3196,36 +3492,12 @@
         
 
         <div class="page2" id="products">
-            <div class="page2-up">
-                <div class="upper">
-                    <div class="inner">
-                        <img src="https://media.istockphoto.com/id/490876094/photo/highlighted-ankle-of-woman-on-treadmill.webp?a=1&b=1&s=612x612&w=0&k=20&c=IVza-MNKFTi4iUxctOlVGcXhbduGcqL2VOsgJYPiqdo=" alt="Bone & Joint care">
-                        <h2>Bone & Joint Care</h2>
-                    </div>
-                    <div class="inner">
-                        <img src="https://media.istockphoto.com/id/1506823544/photo/kidney-problems.webp?a=1&b=1&s=612x612&w=0&k=20&c=lT_7g0BNbOxsHFjDAyOwTgMen8IZwWuSiN5cXtar9rk=" alt="Kidney & Stomach care">
-                        <h2>Kidney & Stomach Care</h2>
-                    </div>
-                    <div class="inner">
-                        <img src="https://media.istockphoto.com/id/1796947698/photo/doctor-connecting-continuous-glucose-monitor-with-smartphone-to-check-blood-sugar-level-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=3QTtX2TRPUPkPMhppNaTTdSR-fAn7n46ib20tPfLdEk=" alt="Diabetes care">
-                        <h2>Diabetes Care</h2>
-                    </div>
-                    <div class="inner">
-                        <img src="https://media.istockphoto.com/id/1627701437/photo/optometry-smile-and-woman-with-prescription-glasses-optician-and-helping-client-with-product.webp?a=1&b=1&s=612x612&w=0&k=20&c=3ZgJkpl-6kbvJPBHtZ39gatst-OMzhx2pPplxefjUWo=" alt="Eye care">
-                        <h2>Eye Care</h2>
-                    </div>
-                    <div class="inner">
-                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2VsbG5lc3N8ZW58MHx8MHx8fDA%3D" alt="Meditation Exercises">
-                        <h2>Wellness & Meditation</h2>
-                    </div>
-                </div>
-            </div>
             <div class="page2-end">
                 <div class="end-div">
                     <div class="inner">
                         <h3>🩺 Expert Medical Consultation</h3>
                         <p>Good health starts with informed decisions. Our pharmacists provide professional guidance on medications and health concerns to support your wellness journey.</p>
-                        <a href="#">Schedule Consultation</a>
+                        
                     </div>
                     <div class="inner1">
                         <img src="consultation.jpg" alt="Medical Consultation">
@@ -3235,7 +3507,7 @@
                     <div class="inner">
                         <h3>📋 Prescription Management</h3>
                         <p>Need a refill or consultation? Our streamlined process makes managing your prescriptions effortless.</p>
-                        <a href="#">Manage Prescriptions</a>
+                        
                     </div>
                     <div class="inner1">
                         <img src="https://images.unsplash.com/photo-1626351543430-23d7f5609535?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFByZXNjcmlwdGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Prescription Management">
@@ -3435,35 +3707,109 @@
                 </div>
             </div>
             
+            <div class="page2" id="products">
+                <div class="page2-up">
+                    <div class="upper">
+                        <div class="inner">
+                            <img src="https://media.istockphoto.com/id/490876094/photo/highlighted-ankle-of-woman-on-treadmill.webp?a=1&b=1&s=612x612&w=0&k=20&c=IVza-MNKFTi4iUxctOlVGcXhbduGcqL2VOsgJYPiqdo=" alt="Bone & Joint care">
+                            <h2>Bone & Joint Care</h2>
+                        </div>
+                        <div class="inner">
+                            <img src="https://media.istockphoto.com/id/1506823544/photo/kidney-problems.webp?a=1&b=1&s=612x612&w=0&k=20&c=lT_7g0BNbOxsHFjDAyOwTgMen8IZwWuSiN5cXtar9rk=" alt="Kidney & Stomach care">
+                            <h2>Kidney & Stomach Care</h2>
+                        </div>
+                        <div class="inner">
+                            <img src="https://media.istockphoto.com/id/1796947698/photo/doctor-connecting-continuous-glucose-monitor-with-smartphone-to-check-blood-sugar-level-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=3QTtX2TRPUPkPMhppNaTTdSR-fAn7n46ib20tPfLdEk=" alt="Diabetes care">
+                            <h2>Diabetes Care</h2>
+                        </div>
+                        <div class="inner">
+                            <img src="https://media.istockphoto.com/id/1627701437/photo/optometry-smile-and-woman-with-prescription-glasses-optician-and-helping-client-with-product.webp?a=1&b=1&s=612x612&w=0&k=20&c=3ZgJkpl-6kbvJPBHtZ39gatst-OMzhx2pPplxefjUWo=" alt="Eye care">
+                            <h2>Eye Care</h2>
+                        </div>
+                        <div class="inner">
+                            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2VsbG5lc3N8ZW58MHx8MHx8fDA%3D" alt="Meditation Exercises">
+                            <h2>Wellness & Meditation</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="page3-down">
                 <div class="cont">
                     <div class="cont-txt">
-                        <h1>Maternal Health & Comfort</h1>
-                        <a href="">Shop Now</a>
-                        <h2>5% Cashback</h2>
+                        <h1>Feminie Health & Comfort</h1>
                     </div>
                     <div class="cont-img">
-                        <img src="https://plus.unsplash.com/premium_photo-1709077628198-72426361feec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TWF0ZXJuYWwlMjBIZWFsdGglMjAlMjYlMjBDb21mb3J0fGVufDB8fDB8fHww" alt="Maternal Health">
+                        <img src="/img/maternal_health.jpg" alt="Maternal Health & Comfort">
                     </div>
                 </div>
                 <div class="cont2">
                     <div class="cont-txt">
                         <h1>Headache & Migraine Solutions</h1>
-                        <a href="">Shop Now</a>
-                        <h2>10% OFF</h2>
                     </div>
                     <div class="cont-img">
-                        <img src="https://media.istockphoto.com/id/1299357739/photo/middle-aged-blonde-woman-sits-on-couch-at-living-room-holding-her-head-with-her-hands-feels.webp?a=1&b=1&s=612x612&w=0&k=20&c=pyhFyyH07CgGDClwSXLnMBs0e8qip-RdJ_qDwQ8mP3o=" alt="Headache & Migraine">
+                        <img src="" alt="Headache & Migraine">
                     </div>
                 </div>
                 <div class="cont2">
                     <div class="cont-txt">
                         <h1>Cold & Flu Relief</h1>
-                        <a href="">Shop Now</a>
-                        <h2>10% OFF</h2>
                     </div>
                     <div class="cont-img">
-                        <img src="https://media.istockphoto.com/id/1857108667/photo/cold-and-flu-symptoms-sick-indian-woman-covered-in-blanket-blowing-nose.webp?a=1&b=1&s=612x612&w=0&k=20&c=qJbPnc2Kj5j3dZMzvATh-1CF-lC-_GEUIHmU_jEK-4s=" alt="Cold & Flu">
+                        <img src="" alt="Cold & Flu">
+                    </div>
+                </div>
+                <div class="cont2">
+                    <div class="cont-txt">
+                        <h1>Vitamin Supplements</h1>
+                    </div>
+                    <div class="cont-img">
+                        <img src="" alt="Cold & Flu">
+                    </div>
+                </div>
+                <div class="cont2">
+                    <div class="cont-txt">
+                        <h1>Cold & Flu Relief</h1>
+                    </div>
+                    <div class="cont-img">
+                        <img src="" alt="Cold & Flu">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="page3">
+            <div class="page3-up">
+                <div class="txt-up">
+                    <h1>Other Pharmacy Section</h1>
+                </div>
+            </div>
+            
+            <div class="page3-down">
+                <div class="cont">
+                    <div class="cont-txt">
+                        <h1>Body Cleaning Products</h1>
+                    </div>
+                    <div class="cont-img">
+                        <img src="/img/maternal_health.jpg" alt="Feminie Health & Comfort">
+                    </div>
+                </div>
+                <div class="cont2">
+                    <div class="cont-txt">
+                        <h1>Hair Care</h1>
+                    </div>
+                    <div class="cont-img">
+                        <img src="" alt="Headache & Migraine">
+                    </div>
+                </div>
+                <div class="cont2">
+                    <div class="cont-txt">
+                        <h1>Skin Care</h1>
+                    </div>
+                    <div class="cont-img">
+                        <img src="" alt="Cold & Flu">
                     </div>
                 </div>
             </div>
@@ -3495,12 +3841,6 @@
                   <div class="product-content">
                     <div class="product-meta">
                       <span class="product-category">Nutrition</span>
-                      <div class="product-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        4.8
-                      </div>
                     </div>
                     <h3 class="product-title">Advanced-Protection Premium Baby Diapers</h3>
                     
@@ -3516,12 +3856,6 @@
                   <div class="product-content">
                     <div class="product-meta">
                       <span class="product-category">Wellness</span>
-                      <div class="product-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        4.9
-                      </div>
                     </div>
                     <h3 class="product-title">Certified Organic Baby Food Collection</h3>
                     
@@ -3537,12 +3871,6 @@
                   <div class="product-content">
                     <div class="product-meta">
                       <span class="product-category">Nutrition</span>
-                      <div class="product-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        4.7
-                      </div>
                     </div>
                     <h3 class="product-title">Advanced Nutrition Infant Formula</h3>
                     
@@ -3558,12 +3886,6 @@
                   <div class="product-content">
                     <div class="product-meta">
                       <span class="product-category">Healthcare</span>
-                      <div class="product-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        4.9
-                      </div>
                     </div>
                     <h3 class="product-title">Hypoallergenic Specialty Baby Formula</h3>
                     
@@ -3597,9 +3919,6 @@
                             <li><span class="emphasized">Aetna</span></li>
                             <li><span class="emphasized">Cigna</span></li>
                             <li><span class="emphasized">Humana</span></li>
-                            <li><span class="emphasized">WIC</span> &nbsp;checks accepted</li>
-                            <li><span class="emphasized">OTC card</span> &nbsp;for eligible items</li>
-                            <li><span class="emphasized">Benefit card</span> &nbsp;eligible purchases</li>
                         </ul>
                     </div>
     
@@ -3613,6 +3932,9 @@
                             <li><span class="emphasized">Credit Cards</span> &nbsp;- Visa, MasterCard, American Express, Discover</li>
                             <li><span class="emphasized">Debit Cards</span> &nbsp;- All major cards accepted</li>
                             <li><span class="emphasized">Mobile Payments</span> &nbsp;- Apple Pay, Google Pay, Samsung Pay</li>
+                            <li><span class="emphasized">WIC</span> &nbsp;checks accepted</li>
+                            <li><span class="emphasized">OTC card</span> &nbsp;for eligible items</li>
+                            <li><span class="emphasized">Benefit card</span> &nbsp;eligible purchases</li>
                         </ul>
                     </div>
                 </div>
@@ -3898,82 +4220,170 @@
             </div>
         </section>
   
-        
 
-        <!-- Modern Minimal Footer (Replace the existing footer/page6 div) -->
-        <footer class="modern-footer" id="contact">
-            <!-- Footer Main Content -->
-            <div class="footer-wrapper">
-                <!-- Logo & Brief About -->
-                <div class="footer-brand">
-                    <div class="brand-container">
-                        <img src="/img/logo.png" alt="Laguardia Pharmacy Logo">
-                        <h2>LAGUARDIA PHARMACY</h2>
-                    </div>
-                    <p>Your trusted neighborhood pharmacy. Quality healthcare products and personalized service.</p>
-                </div>
-                
-                <!-- Contact Information -->
-                <div class="footer-contact-info">
-                    <h3>Contact</h3>
-                    <div class="contact-grid">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>&nbsp;
-                            <p>101-22 Astoria Boulevard<br>East Elmhurst, NY 11369</p>
+        <!-- Elegant Footer for Premium Pharmacy -->
+        <footer class="premium-footer">
+            <!-- Upper Footer Section -->
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Column 1: Brand & About -->
+                        <div class="footer-column brand-column">
+                            <div class="footer-logo">
+                                <img src="/img/logo1.png" alt="Laguardia Pharmacy Logo">
+                                <h2>LAGUARDIA PHARMACY</h2>
+                            </div>
+                            <p class="footer-tagline">Your Trusted Neighborhood Pharmacy</p>
+                            <p class="footer-description">Providing exceptional pharmaceutical care and personalized service to our community with a commitment to your health and wellbeing.</p>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>&nbsp;
-                            <p><a href="tel:7184782576">+1 (718) 478-2576</a></p>
+                        
+                        <!-- Column 2: Quick Links -->
+                        <div class="footer-column links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#hours">Store Hours</a></li>
+                                <li><a href="#testimonials">Testimonials</a></li>
+                            </ul>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>&nbsp;
-                            <p><a href="mailto:laguardiapharmacy101@gmail.com">laguardiapharmacy101@gmail.com</a></p>
+                        
+                        <!-- Column 3: Our Services -->
+                        <div class="footer-column services-column">
+                            <h3>Our Services</h3>
+                            <ul class="footer-links">
+                                <li><a href="#services">Free Delivery</a></li>
+                                <li><a href="#services">DMV Eye Testing</a></li>
+                                <li><a href="#services">Notary Public</a></li>
+                                <li><a href="#services">UPS Access Point</a></li>
+                                <li><a href="#services">Many More...</a></li>
+                            </ul>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>&nbsp;
-                            <p>Mon-Fri: 9am-7pm<br>Sat: 10am-6pm, Sun: Closed</p>
+                        
+                        <!-- Column 4: Contact Information -->
+                        <div class="footer-column contact-column">
+                            <h3>Contact Us</h3>
+                            <ul class="contact-info">
+                                <li>
+                                    <div class="contact-text">
+                                        <span>101-22 Astoria Boulevard</span>
+                                        <span>East Elmhurst, NY 11369</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contact-text">
+                                        <a href="tel:7184782576">(718) 478-2576</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contact-text">
+                                        <a href="mailto:laguardiapharmacy101@gmail.com">laguardiapharmacy101@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contact-text hours-grid">
+                                        <span>Monday - Friday:</span>
+                                        <span>9am - 6:45pm</span>
+                                        <span>Saturday:</span>
+                                        <span>10am - 5:45pm</span>
+                                        <span>Sunday:</span>
+                                        <span>10am - 2:45pm</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="footer-links-section">
-                    <div class="links-column">
-                        <h3>Main Menu</h3>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#hours">Hours</a></li>
-                            <li><a href="https://goo.gl/maps/ke9MqZGYe9ku9Ltd6" target="_blank">Direction</a></li>
-                            <li><a href="#contact">Contact</a></ll>
-                        </ul>
-                    </div>
-                    <div class="links-column">
-                        <h3>Our Services</h3>
-                        <ul>
-                            <li><a href="#services">Prescription Delivery</a></li>
-                            <li><a href="#services">DMV Eye Test</a></li>
-                            <li><a href="#services">Notary Public</a></li>
-                            <li><a href="#services">UPS Access Point</a></li>
-                            <li><a href="#services">NY Lottery</a></li>
-                            <li><a href="#services">Many More...</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Footer Bottom -->
+            <!-- Bottom Footer -->
             <div class="footer-bottom">
-                <div class="footer-bottom-wrapper">
-                    <div class="copyright">
-                        <p>&copy; <span id="year"></span> Laguardia Pharmacy. All Rights Reserved</p>
+                <div class="container">
+                    <div class="footer-bottom-wrapper">
+                        <div class="copyright">
+                            <p>&copy; <span id="current-year">2025</span> Laguardia Pharmacy. All Rights Reserved.</p>
+                        </div>
+                        <div class="developer-credit">
+                            <p>Designed & Developed by <a href="#" class="developer-link">Ashish</a></p>
+                        </div>
+                        <div class="footer-legal">
+                            <a href="#" id="privacy-link">Privacy Policy & Terms of Service</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
+    
+        <!-- Popup Overlay -->
+    <div class="overlay" id="policyOverlay">
+        <div class="popup-container">
+            <div class="popup-header">
+                <h2>Privacy Policy & Terms of Service</h2>
+                <button class="close-btn" id="closePopup">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-content">
+                <div class="policy-section">
+                    <h3>Privacy Policy</h3>
+                    <p>Welcome to our website. We respect your privacy. This website is designed to be simple, secure, and privacy-friendly.</p>
+                    
+                    <p><strong>Information We Don't Collect</strong></p>
+                    <p>We want to be clear about our practices:</p>
+                    <ul>
+                        <li>We do not collect any personal information from visitors to our website.</li>
+                        <li>We do not use cookies or similar tracking technologies.</li>
+                        <li>We do not use analytics tools that collect user data.</li>
+                        <li>We do not store or process any visitor information on our servers.</li>
+                        <li>We do not share any information with third parties because we don't collect any.</li>
+                    </ul>
+                    
+                    <p>Our website is designed to provide information without requiring any personal data from you. You can browse our site anonymously without concerns about data collection or tracking.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Terms of Service</h3>
+                    <p>By accessing or using our website, you agree to these terms. If you disagree with any part of the terms, you may not access the website.</p>
+                    
+                    <p><strong>Intellectual Property</strong></p>
+                    <p>All content on this website — including text, images, graphics, and code — is either owned by us or licensed for use. It is protected by applicable copyright and intellectual property laws.</p>
+                    
+                    <p><strong>Use of Content</strong></p>
+                    <ul>
+                        <li>You are welcome to view, read, and share the content for personal, non-commercial use.</li>
+                        <li>You may not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information or content obtained from this website without our prior written permission.</li>
+                        <li>For inquiries regarding the use of code, photos, or other content from our website, please contact us using the information provided below.</li>
+                    </ul>
+                </div>
 
+                <div class="policy-section">
+                    <h3>Content Attribution</h3>
+                    <ul>
+                        <li>All images used on this website are AI-generated.</li>
+                        <li>Code used in the creation of this website was generated with the assistance of Claude AI, an artificial intelligence tool by Anthropic.</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Content & Asset Usage</h3>
+                    <p>If you have any questions regarding the use of our code, images, or other materials — especially for reuse, attribution, or licensing — feel free to contact us.:</p>
+                    
+                    <div class="popup-contact-info">
+                        <h4>Get In Touch</h4>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>mrsaini281@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+            <div class="popup-footer">
+                <p>By using our website, you acknowledge that you have read and understood our Privacy Policy and Terms of Service.</p>
+                <button class="btn" id="acceptBtn">I Understand</button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -4118,5 +4528,29 @@
             document.getElementById('year').textContent = new Date().getFullYear();
         });
     </script>
+    <script>
+        // Show popup when privacy link is clicked
+        document.getElementById('privacy-link').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            document.getElementById('policyOverlay').style.display = 'flex';
+        });
+        
+        // Close popup when close button is clicked
+        document.getElementById('closePopup').addEventListener('click', function() {
+            document.getElementById('policyOverlay').style.display = 'none';
+        });
+        
+        // Close popup when accept button is clicked
+        document.getElementById('acceptBtn').addEventListener('click', function() {
+            document.getElementById('policyOverlay').style.display = 'none';
+        });
+        
+        // Close popup when clicking outside the popup
+        document.getElementById('policyOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+</script>
 </body>
 </html>
